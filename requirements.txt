@@ -1,0 +1,38 @@
+# --- 核心数据处理 ---
+numpy>=1.26.0     # Python 3.12 兼容版本
+pandas>=2.1.0
+
+# --- DSP 信号处理 ---
+librosa>=0.10.1   # 音频处理核心库
+scipy>=1.11.0
+soundfile>=0.12.1 # 音频读写依赖
+
+# --- 可视化 ---
+matplotlib>=3.8.0 # 绘图核心
+seaborn>=0.13.0   # 用于绘制漂亮的箱线图和混淆矩阵
+
+# --- GUI 界面 ---
+PyQt5>=5.15.10    
+
+# --- 机器学习基础 ---
+scikit-learn>=1.3.0  # 用于混淆矩阵、分类报告、自动权重计算
+tqdm>=4.66.0         # 进度条显示
+
+# --- 深度学习 (PyTorch) ---
+# 指定版本以确保与 Python 3.12 和 AudioLDM 兼容
+torch>=2.1.0      
+torchaudio>=2.1.0
+# [新增] 必须添加 torchvision，用于 GAN 训练中的 save_image 绘图
+torchvision>=0.16.0 
+
+# [新增] GAN 评估指标 (用于计算 FID 和 IS)
+torch-fidelity>=0.3.0
+
+# --- 大模型交互 ---
+openai>=1.0.0     
+
+# --- 音频生成 (AudioLDM) ---
+diffusers>=0.24.0      
+transformers>=4.36.0   
+accelerate>=0.25.0     
+safetensors>=0.4.0
