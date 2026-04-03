@@ -14,7 +14,7 @@
 
 本项目的数据集极具多样性，涵盖了陆地与海洋的多种生物声学样本。
 
-- **数据来源：** *Kaggle,FreeAnimalSounds,以及部分由小组成员从抖音等小视频平台下载*
+- **数据来源：** Kaggle,FreeAnimalSounds,以及部分由小组成员从抖音等小视频平台下载,数据量较少，希望大家理解与积极补充。
 - **数据获取：** 我已将自己收集制作的数据集上传至kaggle,地址为[![Kaggle](https://img.shields.io/badge/Kaggle-点击跳转数据集主页-20BEFF?style=flat&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/owltechcode/animal-sound-translation-dataset)
 - **物种构成：** * **全功能组（含情绪标签）：** 猴 (4类情绪)、狗 (3类情绪)、原鸡 (3类情绪)、鹿 (3类情绪)。
   - **单功能组（物种特征展示）：** 大象 (愤怒)、海豚/抹香鲸 (水下声学特征去噪)。
