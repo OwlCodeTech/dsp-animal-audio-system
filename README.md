@@ -14,7 +14,8 @@
 
 本项目的数据集极具多样性，涵盖了陆地与海洋的多种生物声学样本。
 
-- **数据来源：** Kaggle,FreeAnimalSounds,以及部分由小组成员从抖音等小视频平台下载
+- **数据来源：** *Kaggle,FreeAnimalSounds,以及部分由小组成员从抖音等小视频平台下载*
+- **数据获取：** 我已将自己收集制作的数据集上传至kaggle,地址为[![Kaggle](https://img.shields.io/badge/Kaggle-点击跳转数据集主页-20BEFF?style=flat&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/owltechcode/animal-sound-translation-dataset)
 - **物种构成：** * **全功能组（含情绪标签）：** 猴 (4类情绪)、狗 (3类情绪)、原鸡 (3类情绪)、鹿 (3类情绪)。
   - **单功能组（物种特征展示）：** 大象 (愤怒)、海豚/抹香鲸 (水下声学特征去噪)。
 - **数据规格：** 原始音频经过统一清洗，转化为 `22,050 Hz`, `单声道 Mono`, `16-bit PCM` 格式，并统一填充/裁剪为 5.0 秒片段。
@@ -30,25 +31,32 @@
 Bash
 
 ```
-git clone [https://github.com/](https://github.com/)[你的GitHub用户名]/[你的仓库名].git
-cd [你的仓库名]
+git clone https://github.com/OwlCodeTech/dsp-animal-audio-system.git
+cd dsp-animal-audio-system
 pip install -r requirements.txt
 ```
 
-### 2. 准备数据
+### 2. 下载与准备数据
 
-请先下载上述数据集，并解压至项目根目录的 `dataset_raw/` 文件夹下。随后运行预处理脚本生成特征矩阵：
+本项目支持通过 Kaggle API 自动下载数据集。请确保你已配置好 `kaggle.json` 凭证。在项目根目录下执行以下命令：
 
 Bash
 
 ```
+# 1. 使用 Kaggle API 下载数据集
+kaggle datasets download -d owltechcode/animal-sound-translation-dataset
+
+# 2. 解压至 dataset_raw 目录
+unzip animal-sound-translation-dataset.zip -d dataset_raw/
+
+# 3. 运行预处理脚本生成特征矩阵
 python src/preprocess.py
 python src/feature_extract.py
 ```
 
 ### 3. 运行系统
 
-在项目根目录下执行主程序，启动交互式 GUI 界面：
+在项目根目录下执行主程序，即可启动交互式 GUI 界面：
 
 Bash
 
